@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CameraImageViewCellIdentifier" id="gTV-IL-0wX" customClass="CameraImageViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ci2-ua-2DE">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EBM-01-AVc">
+                                <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EBM-01-AVc" secondAttribute="height" multiplier="1:1" id="5bV-3x-MHv"/>
+                                    <constraint firstAttribute="width" constant="50" id="fss-TC-SSH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delegate" translatesAutoresizingMaskIntoConstraints="NO" id="wLj-LW-BMu">
+                                <rect key="frame" x="50" y="0.0" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="63k-VT-u47"/>
+                                    <constraint firstAttribute="width" constant="10" id="oWc-8i-ahY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XX9-Yg-R85">
+                                <rect key="frame" x="35" y="0.0" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Fug-ui-XT1"/>
+                                    <constraint firstAttribute="height" constant="25" id="OLa-C0-Ec0"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wLj-LW-BMu" firstAttribute="top" secondItem="Ci2-ua-2DE" secondAttribute="top" id="BMp-vV-QQk"/>
+                            <constraint firstAttribute="trailing" secondItem="XX9-Yg-R85" secondAttribute="trailing" id="FTM-HF-ArK"/>
+                            <constraint firstItem="EBM-01-AVc" firstAttribute="centerY" secondItem="Ci2-ua-2DE" secondAttribute="centerY" id="N3R-26-fx9"/>
+                            <constraint firstItem="XX9-Yg-R85" firstAttribute="top" secondItem="Ci2-ua-2DE" secondAttribute="top" id="Sjr-DL-59a"/>
+                            <constraint firstItem="EBM-01-AVc" firstAttribute="centerX" secondItem="Ci2-ua-2DE" secondAttribute="centerX" id="Xcc-gz-RZ7"/>
+                            <constraint firstAttribute="trailing" secondItem="wLj-LW-BMu" secondAttribute="trailing" id="YVz-wv-mj1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ci2-ua-2DE" secondAttribute="bottom" id="K18-Ky-87u"/>
+                <constraint firstItem="Ci2-ua-2DE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lSG-wg-4er"/>
+                <constraint firstItem="Ci2-ua-2DE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qQ1-Y8-MKo"/>
+                <constraint firstAttribute="trailing" secondItem="Ci2-ua-2DE" secondAttribute="trailing" id="rB5-Vp-pCR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="cameraImg" destination="EBM-01-AVc" id="3v5-zo-IED"/>
+                <outlet property="delegateBtn" destination="XX9-Yg-R85" id="75X-Wu-Zit"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delegate" width="12" height="12"/>
+    </resources>
+</document>

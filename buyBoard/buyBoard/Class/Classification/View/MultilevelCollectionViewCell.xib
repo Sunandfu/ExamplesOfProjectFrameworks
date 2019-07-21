@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MultilevelCollectionViewCellIdentifier" id="gTV-IL-0wX" customClass="MultilevelCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-yh-jjZ">
+                        <rect key="frame" x="20" y="10" width="76" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UQU-yh-jjZ" secondAttribute="height" multiplier="76:50" id="Xpo-KN-Pe4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马六甲生态板新款预售" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23u-hU-07T">
+                        <rect key="frame" x="106" y="10" width="143" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <color key="textColor" red="0.019607843137254902" green="0.043137254901960784" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥155.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDc-Sk-eRd">
+                        <rect key="frame" x="106" y="37" width="61" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pI0-ug-BTc">
+                        <rect key="frame" x="321" y="39" width="34" height="16"/>
+                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="dHD-Nm-ELY"/>
+                            <constraint firstAttribute="width" constant="34" id="u7W-Pk-Qf1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                        <state key="normal" title="购买">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pI0-ug-BTc" secondAttribute="trailing" constant="20" id="0OX-jb-tN5"/>
+                <constraint firstItem="23u-hU-07T" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="5oB-3u-HBl"/>
+                <constraint firstItem="UQU-yh-jjZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="8bp-5W-b5W"/>
+                <constraint firstItem="eDc-Sk-eRd" firstAttribute="leading" secondItem="UQU-yh-jjZ" secondAttribute="trailing" constant="10" id="AQQ-yu-HpS"/>
+                <constraint firstItem="UQU-yh-jjZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="OH1-rL-O7i"/>
+                <constraint firstItem="23u-hU-07T" firstAttribute="leading" secondItem="UQU-yh-jjZ" secondAttribute="trailing" constant="10" id="cL7-cX-KbM"/>
+                <constraint firstAttribute="bottom" secondItem="eDc-Sk-eRd" secondAttribute="bottom" constant="15" id="j5H-tH-YoR"/>
+                <constraint firstAttribute="bottom" secondItem="pI0-ug-BTc" secondAttribute="bottom" constant="15" id="uDj-f5-NTH"/>
+                <constraint firstAttribute="bottom" secondItem="UQU-yh-jjZ" secondAttribute="bottom" constant="10" id="zRy-e0-B4y"/>
+            </constraints>
+            <size key="customSize" width="192" height="135"/>
+            <connections>
+                <outlet property="buyButton" destination="pI0-ug-BTc" id="5St-M0-fAw"/>
+                <outlet property="imageView" destination="UQU-yh-jjZ" id="Bar-iZ-2vt"/>
+                <outlet property="priceLabel" destination="eDc-Sk-eRd" id="RY5-cC-AMy"/>
+                <outlet property="titile" destination="23u-hU-07T" id="gVc-Q4-QZF"/>
+            </connections>
+            <point key="canvasLocation" x="400.00000000000006" y="416.85267857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>
